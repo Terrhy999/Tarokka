@@ -5,6 +5,7 @@
 
 #radioButtons {
     flex-flow: column;
+    padding: 10px;
 }
 
 .dropDown {
