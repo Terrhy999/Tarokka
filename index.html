@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <form class="container">
+        <div class="dropDownMenu">
+            <div onclick="dropDownSuit()" class="dropDownButton" id="suitButton">
+                <img src="https://via.placeholder.com/50" class="cardImage">
+                <p class="cardName">Card Rank</p>
+            </div>
+            <div>
+                <ul class="dropDown hide" id="suitDropDown">
+                    <li class="dropDownItem" id="cardAce" onclick="setButton(this.id)">
+                        <img src="https://via.placeholder.com/50" class="suitImage">
+                        <p class="cardName">Ace</p>
+                    </li>
+
+                    <li class="dropDownItem" id="cardTwo" onclick="setButton(this.id)">
+                        <img src="https://via.placeholder.com/50" class="suitImage">
+                        <p class="cardName">Two</p>
+                    </li>
+
+                    <li class="dropDownItem" id="cardThree" onclick="setButton(this.id)">
+                        <img src="https://via.placeholder.com/50" class="suitImage">
+                        <p class="cardName">Three</p>
+                    </li>
+
+                    <li class="dropDownItem" id="cardFour" onclick="setButton(this.id)">
+                        <img src="https://via.placeholder.com/50" class="suitImage">
+                        <p class="cardName">Four</p>
+                    </li>
+
+                    <li class="dropDownItem" id="cardFive" onclick="setButton(this.id)">
+                        <img src="https://via.placeholder.com/50" class="suitImage">
+                        <p class="cardName">Five</p>
+                    </li>
+
+                    <li class="dropDownItem" id="cardSix" onclick="setButton(this.id)">
+                        <img src="https://via.placeholder.com/50" class="suitImage">
+                        <p class="cardName">Six</p>
+                    </li>
+
+                    <li class="dropDownItem" id="cardSeven" onclick="setButton(this.id)">
+                        <img src="https://via.placeholder.com/50" class="suitImage">
+                        <p class="cardName">Seven</p>
+                    </li>
+
+                    <li class="dropDownItem" id="cardEight" onclick="setButton(this.id)">
+                        <img src="https://via.placeholder.com/50" class="suitImage">
+                        <p class="cardName">Eight</p>
+                    </li>
+
+                    <li class="dropDownItem" id="cardNine" onclick="setButton(this.id)">
+                        <img src="https://via.placeholder.com/50" class="suitImage">
+                        <p class="cardName">Nine</p>
+                    </li>
+
+                    <li class="dropDownItem" id="cardTen" onclick="setButton(this.id)">
+                        <img src="https://via.placeholder.com/50" class="suitImage">
+                        <p class="cardName">Ten</p>
+                    </li>
+
+                    <li class="dropDownItem" id="cardJack" onclick="setButton(this.id)">
+                        <img src="https://via.placeholder.com/50" class="suitImage">
+                        <p class="cardName">Jack</p>
+                    </li>
+
+                    <li class="dropDownItem" id="cardQueen" onclick="setButton(this.id)">
+                        <img src="https://via.placeholder.com/50" class="suitImage">
+                        <p class="cardName">Queen</p>
+                    </li>
+
+                    <li class="dropDownItem" id="cardKing" onclick="setButton(this.id)">
+                        <img src="https://via.placeholder.com/50" class="suitImage">
+                        <p class="cardName">King</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container" id="radioButtons">
+            <input type="radio" id="suitChoice1"
+             name="suit" value="club">
+            <label for="suitChoice1">Club</label>
+        
+            <input type="radio" id="suitChoice2"
+             name="suit" value="diamond">
+            <label for="suitChoice2">Diamond</label>
+        
+            <input type="radio" id="suitChoice3"
+             name="suit" value="heard">
+            <label for="suitChoice3">Heart</label>
+
+            <input type="radio" id="suitChoice3"
+            name="suit" value="spade">
+           <label for="suitChoice3">Spade</label>
+        </div>
+    </form>
+</body>
+
+</html>
