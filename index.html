@@ -19,67 +19,67 @@
             <div>
                 <ul class="dropDown hide" id="suitDropDown">
                     <li class="dropDownItem" id="cardAce" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="suitImage">
+                        <img src="https://via.placeholder.com/30" class="cardImage">
                         <p class="cardName">Ace</p>
                     </li>
 
                     <li class="dropDownItem" id="cardTwo" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="suitImage">
+                        <img src="https://via.placeholder.com/30" class="cardImage">
                         <p class="cardName">Two</p>
                     </li>
 
                     <li class="dropDownItem" id="cardThree" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="suitImage">
+                        <img src="https://via.placeholder.com/30" class="cardImage">
                         <p class="cardName">Three</p>
                     </li>
 
                     <li class="dropDownItem" id="cardFour" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="suitImage">
+                        <img src="https://via.placeholder.com/30" class="cardImage">
                         <p class="cardName">Four</p>
                     </li>
 
                     <li class="dropDownItem" id="cardFive" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="suitImage">
+                        <img src="https://via.placeholder.com/30" class="cardImage">
                         <p class="cardName">Five</p>
                     </li>
 
                     <li class="dropDownItem" id="cardSix" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="suitImage">
+                        <img src="https://via.placeholder.com/30" class="cardImage">
                         <p class="cardName">Six</p>
                     </li>
 
                     <li class="dropDownItem" id="cardSeven" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="suitImage">
+                        <img src="https://via.placeholder.com/30" class="cardImage">
                         <p class="cardName">Seven</p>
                     </li>
 
                     <li class="dropDownItem" id="cardEight" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="suitImage">
+                        <img src="https://via.placeholder.com/30" class="cardImage">
                         <p class="cardName">Eight</p>
                     </li>
 
                     <li class="dropDownItem" id="cardNine" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="suitImage">
+                        <img src="https://via.placeholder.com/30" class="cardImage">
                         <p class="cardName">Nine</p>
                     </li>
 
                     <li class="dropDownItem" id="cardTen" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="suitImage">
+                        <img src="https://via.placeholder.com/30" class="cardImage">
                         <p class="cardName">Ten</p>
                     </li>
 
                     <li class="dropDownItem" id="cardJack" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="suitImage">
+                        <img src="https://via.placeholder.com/30" class="cardImage">
                         <p class="cardName">Jack</p>
                     </li>
 
                     <li class="dropDownItem" id="cardQueen" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="suitImage">
+                        <img src="https://via.placeholder.com/30" class="cardImage">
                         <p class="cardName">Queen</p>
                     </li>
 
                     <li class="dropDownItem" id="cardKing" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="suitImage">
+                        <img src="https://via.placeholder.com/30" class="cardImage">
                         <p class="cardName">King</p>
                     </li>
                 </ul>
@@ -87,18 +87,84 @@
         </div>
         <div class="flex" id="radioButtons">
 
-            <label for="suitChoice1"><input type="radio" id="suitChoice1" name="suit" value="club">Club</label>
+            <label for="suitChoice1"><input type="radio" id="suitChoice1" name="suit" value="club"><img
+                    src="https://via.placeholder.com/30" class="cardImage">Club</label>
 
 
-            <label for="suitChoice2"><input type="radio" id="suitChoice2" name="suit" value="diamond">Diamond</label>
+            <label for="suitChoice2"><input type="radio" id="suitChoice2" name="suit" value="diamond"><img
+                    src="https://via.placeholder.com/30" class="cardImage">Diamond</label>
 
 
-            <label for="suitChoice3"><input type="radio" id="suitChoice3" name="suit" value="heard">Heart</label>
+            <label for="suitChoice3"><input type="radio" id="suitChoice3" name="suit" value="heard"><img
+                    src="https://via.placeholder.com/30" class="cardImage">Heart</label>
 
 
-            <label for="suitChoice4"><input type="radio" id="suitChoice4" name="suit" value="spade">Spade</label>
+            <label for="suitChoice4"><input type="radio" id="suitChoice4" name="suit" value="spade"><img
+                    src="https://via.placeholder.com/30" class="cardImage">Spade</label>
+
+            <button class="submitButton" id="submitButton" type="button">Add Card</button>
         </div>
     </form>
+
+    <div class="deck">
+        <button class="callDeck" type="button" onclick="zIndexLoop()">Click Me</button>
+        <img src="https://via.placeholder.com/200x280/010486" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280/000000" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280/065254" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280/943861" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280/987630" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280/000000" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+
+
+    </div>
 </body>
 
 </html>

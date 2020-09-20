@@ -7,6 +7,13 @@
     flex-direction: column;
 }
 
+#radioButtons label {
+    display: flex;
+    align-items: center;
+    background-color: antiquewhite;
+    padding: 2px 8px 2px 4px;
+}
+
 
 .dropDown {
     list-style-type: none;
@@ -28,6 +35,10 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+ }
+
+ .cardImage {
+     padding: 2px;
  }
 
  .cardName {
@@ -76,3 +87,14 @@
 .hide {
     display: none;
 }
+
+.deck {
+    width: 210px;
+    position: relative;
+}
+
+.deckCard {
+    position: absolute;
+    transition-delay: 2s;
+}
+
