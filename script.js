@@ -27,15 +27,15 @@ function zIndexLoop() {
     let cardsRed = document.querySelectorAll("img.deckCardRed");
     for (let i = 0; i < cards.length; i++) {
         cards[i].style.zIndex = i;
-        cards[i].style.top = i*20+"px";
+        cards[i].style.top = i*25+"px";
     }
     for (let i = 0; i < faceCards.length; i++) {
         faceCards[i].style.zIndex = i;
-        faceCards[i].style.top = i*20 + "px";
+        faceCards[i].style.top = i*25 + "px";
     }
     for (let i = 0; i < cardsRed.length; i++) {
         cardsRed[i].style.zIndex = i;
-        cardsRed[i].style.top = i*20 + "px";
+        cardsRed[i].style.top = i*25 + "px";
     }
     addEventListeners();
 }
@@ -62,7 +62,7 @@ function cardHoverExit(index) {
     let currentIndex = index;
     let remainingCards = document.querySelectorAll("img.deckCard");
     for (let i = currentIndex + 1; i < remainingCards.length; i++) {
-        remainingCards[i].style.top = parseInt(remainingCards[i].style.top, 10) - 260 + "px";
+        remainingCards[i].style.top = parseInt(remainingCards[i].style.top, 10) - 115 + "px";
     }
 } 
 
@@ -70,7 +70,7 @@ function faceHoverExit(index) {
     let currentIndex = index;
     let remainingFaceCards = document.querySelectorAll("img.faceCard");
     for (let i = currentIndex + 1; i < remainingFaceCards.length; i++) {
-        remainingFaceCards[i].style.top = parseInt(remainingFaceCards[i].style.top, 10) - 260 + "px";
+        remainingFaceCards[i].style.top = parseInt(remainingFaceCards[i].style.top, 10) - 115 + "px";
     }
 } 
 
@@ -79,7 +79,7 @@ function cardHoverEnter(index) {
     let currentIndex = index;
     let remainingCards = document.querySelectorAll("img.deckCard")
     for (let i = currentIndex + 1; i < remainingCards.length; i++) {
-        remainingCards[i].style.top = parseInt(remainingCards[i].style.top, 10) + 260 + "px";
+        remainingCards[i].style.top = parseInt(remainingCards[i].style.top, 10) + 115 + "px";
     }
     
 }
@@ -89,7 +89,7 @@ function redHoverEnter(index) {
     let currentIndex = index;
     let remainingCards = document.querySelectorAll("img.deckCardRed")
     for (let i = currentIndex + 1; i < remainingCards.length; i++) {
-        remainingCards[i].style.top = parseInt(remainingCards[i].style.top, 10) + 260 + "px";
+        remainingCards[i].style.top = parseInt(remainingCards[i].style.top, 10) + 115 + "px";
     }
     
 }
@@ -98,7 +98,7 @@ function redHoverExit(index) {
     let currentIndex = index;
     let remainingCards = document.querySelectorAll("img.deckCardRed");
     for (let i = currentIndex + 1; i < remainingCards.length; i++) {
-        remainingCards[i].style.top = parseInt(remainingCards[i].style.top, 10) - 260 + "px";
+        remainingCards[i].style.top = parseInt(remainingCards[i].style.top, 10) - 115 + "px";
     }
 } 
 
@@ -107,7 +107,7 @@ function faceHoverEnter(index) {
     let currentIndex = index;
     let remainingFaceCards = document.querySelectorAll("img.faceCard")
     for (let i = currentIndex + 1; i < remainingFaceCards.length; i++) {
-        remainingFaceCards[i].style.top = parseInt(remainingFaceCards[i].style.top, 10) + 260 + "px";
+        remainingFaceCards[i].style.top = parseInt(remainingFaceCards[i].style.top, 10) + 115 + "px";
     }
     
 } 
