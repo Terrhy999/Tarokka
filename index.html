@@ -9,8 +9,8 @@
     <script src="script.js" defer></script>
 </head>
 
-<body>
-    <form class="flex">
+<body onload=zIndexLoop()>
+    <!-- <form class="flex">
         <div class="dropDownMenu">
             <button onclick="dropDownSuit()" class="dropDownButton" id="suitButton" type="button">
                 <img src="https://via.placeholder.com/30" class="cardImage">
@@ -104,67 +104,75 @@
 
             <button class="submitButton" id="submitButton" type="button">Add Card</button>
         </div>
-    </form>
+    </form> -->
 
-    <div class="deck">
-        <button class="callDeck" type="button" onclick="zIndexLoop()">Click Me</button>
-        <img src="https://via.placeholder.com/200x280/010486" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280/000000" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280/065254" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280/943861" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280/987630" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280/000000" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
-        <img src="https://via.placeholder.com/200x280" class= "deckCard">
+    <div class = "flex tarokka">
+        <button class="callDeck" type="button" onclick="toggleHide()">Click Me</button>
+        <div class="deck rank">
+            <img src="PNG/AC.png" class= "deckCard card hide">
+            <img src="PNG/2C.png" class= "deckCard card hide">
+            <img src="PNG/3C.png" class= "deckCard card hide">
+            <img src="PNG/4C.png" class= "deckCard card hide">
+            <img src="PNG/5C.png" class= "deckCard card hide">
+            <img src="PNG/6C.png" class= "deckCard card hide">
+            <img src="PNG/7C.png" class= "deckCard card hide">
+            <img src="PNG/8C.png" class= "deckCard card hide">
+            <img src="PNG/9C.png" class= "deckCard card hide">
+            <img src="PNG/10C.png" class= "deckCard card hide">
+            <img src="PNG/AS.png" class= "deckCard card hide">
+            <img src="PNG/2S.png" class= "deckCard card hide">
+            <img src="PNG/3S.png" class= "deckCard card hide">
+            <img src="PNG/4S.png" class= "deckCard card hide">
+            <img src="PNG/5S.png" class= "deckCard card hide">
+            <img src="PNG/6S.png" class= "deckCard card hide">
+            <img src="PNG/7S.png" class= "deckCard card hide">
+            <img src="PNG/8S.png" class= "deckCard card hide">
+            <img src="PNG/9S.png" class= "deckCard card hide">
+            <img src="PNG/10S.png" class= "deckCard card hide">
+        </div>
 
 
-    </div>
+        <div class = "deck rank">
+            <img src="PNG/AD.png" class= "deckCardRed card hide">
+            <img src="PNG/2D.png" class= "deckCardRed card hide">
+            <img src="PNG/3D.png" class= "deckCardRed card hide">
+            <img src="PNG/4D.png" class= "deckCardRed card hide">
+            <img src="PNG/5D.png" class= "deckCardRed card hide">
+            <img src="PNG/6D.png" class= "deckCardRed card hide">
+            <img src="PNG/7D.png" class= "deckCardRed card hide">
+            <img src="PNG/8D.png" class= "deckCardRed card hide">
+            <img src="PNG/9D.png" class= "deckCardRed card hide">
+            <img src="PNG/10D.png" class= "deckCardRed card hide">
+            <img src="PNG/AH.png" class= "deckCardRed card hide">
+            <img src="PNG/2H.png" class= "deckCardRed card hide">
+            <img src="PNG/3H.png" class= "deckCardRed card hide">
+            <img src="PNG/4H.png" class= "deckCardRed card hide">
+            <img src="PNG/5H.png" class= "deckCardRed card hide">
+            <img src="PNG/6H.png" class= "deckCardRed card hide">
+            <img src="PNG/7H.png" class= "deckCardRed card hide">
+            <img src="PNG/8H.png" class= "deckCardRed card hide">
+            <img src="PNG/9H.png" class= "deckCardRed card hide">
+            <img src="PNG/10H.png" class= "deckCardRed card hide">
+        </div>
+        
+        <div class = "deck face">
+            <img src="PNG/JC.png" class= "faceCard card hide">
+            <img src="PNG/QC.png" class= "faceCard card hide">
+            <img src="PNG/KC.png" class= "faceCard card hide">
+            <img src="PNG/JS.png" class= "faceCard card hide">
+            <img src="PNG/QS.png" class= "faceCard card hide">
+            <img src="PNG/KS.png" class= "faceCard card hide">
+            <img src="PNG/JD.png" class= "faceCard card hide">
+            <img src="PNG/QD.png" class= "faceCard card hide">
+            <img src="PNG/KD.png" class= "faceCard card hide">
+            <img src="PNG/JH.png" class= "faceCard card hide">
+            <img src="PNG/QH.png" class= "faceCard card hide">
+            <img src="PNG/KH.png" class= "faceCard card hide">
+            <img src="PNG/blue_back.png" class= "faceCard card hide">
+            <img src="PNG/red_back.png" class= "faceCard card hide">
+        </div>
+    </div>    
+
 </body>
 
 </html>

@@ -2,6 +2,10 @@
     display: flex;
 }
 
+.tarokka {
+    align-content: center;
+}
+
 #radioButtons {
     padding: 10px;
     flex-direction: column;
@@ -93,8 +97,9 @@
     position: relative;
 }
 
-.deckCard {
+.card {
     position: absolute;
-    transition-delay: 2s;
+    width: 200px;
+    height: 280px;  
 }
 
