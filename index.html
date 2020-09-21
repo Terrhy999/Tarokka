@@ -6,83 +6,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
     <script src="script.js" defer></script>
 </head>
 
 <body onload="construct()">
     <button class="button" type="button" onclick="toggleHide()">Click Me</button>
-    <div class = "tarokka">
-        <div class="deck">
-            <img src="PNG/AC.png" class= "card hide toggle">
-            <img src="PNG/2C.png" class= "card hide toggle">
-            <img src="PNG/3C.png" class= "card hide toggle">
-            <img src="PNG/4C.png" class= "card hide toggle">
-            <img src="PNG/5C.png" class= "card hide toggle">
-            <img src="PNG/6C.png" class= "card hide toggle">
-            <img src="PNG/7C.png" class= "card hide toggle">
-            <img src="PNG/8C.png" class= "card hide toggle">
-            <img src="PNG/9C.png" class= "card hide toggle">
-            <img src="PNG/10C.png" class= "card hide toggle">
-            <img src="PNG/AS.png" class= "card hide toggle">
-            <img src="PNG/2S.png" class= "card hide toggle">
-            <img src="PNG/3S.png" class= "card hide toggle">
-            <img src="PNG/4S.png" class= "card hide toggle">
-            <img src="PNG/5S.png" class= "card hide toggle">
-            <img src="PNG/6S.png" class= "card hide toggle">
-            <img src="PNG/7S.png" class= "card hide toggle">
-            <img src="PNG/8S.png" class= "card hide toggle">
-            <img src="PNG/9S.png" class= "card hide toggle">
-            <img src="PNG/10S.png" class= "card hide toggle">
+    <div class="flex">
+        <div class="tarokka">
+            <div class="deck">
+                <img src="PNG/AC.png" class="card hide toggle">
+                <img src="PNG/2C.png" class="card hide toggle">
+                <img src="PNG/3C.png" class="card hide toggle">
+                <img src="PNG/4C.png" class="card hide toggle">
+                <img src="PNG/5C.png" class="card hide toggle">
+                <img src="PNG/6C.png" class="card hide toggle">
+                <img src="PNG/7C.png" class="card hide toggle">
+                <img src="PNG/8C.png" class="card hide toggle">
+                <img src="PNG/9C.png" class="card hide toggle">
+                <img src="PNG/10C.png" class="card hide toggle">
+                <img src="PNG/AS.png" class="card hide toggle">
+                <img src="PNG/2S.png" class="card hide toggle">
+                <img src="PNG/3S.png" class="card hide toggle">
+                <img src="PNG/4S.png" class="card hide toggle">
+                <img src="PNG/5S.png" class="card hide toggle">
+                <img src="PNG/6S.png" class="card hide toggle">
+                <img src="PNG/7S.png" class="card hide toggle">
+                <img src="PNG/8S.png" class="card hide toggle">
+                <img src="PNG/9S.png" class="card hide toggle">
+                <img src="PNG/10S.png" class="card hide toggle">
+            </div>
+
+            <div class="deck">
+                <img src="PNG/AD.png" class="card hide toggle">
+                <img src="PNG/2D.png" class="card hide toggle">
+                <img src="PNG/3D.png" class="card hide toggle">
+                <img src="PNG/4D.png" class="card hide toggle">
+                <img src="PNG/5D.png" class="card hide toggle">
+                <img src="PNG/6D.png" class="card hide toggle">
+                <img src="PNG/7D.png" class="card hide toggle">
+                <img src="PNG/8D.png" class="card hide toggle">
+                <img src="PNG/9D.png" class="card hide toggle">
+                <img src="PNG/10D.png" class="card hide toggle">
+                <img src="PNG/AH.png" class="card hide toggle">
+                <img src="PNG/2H.png" class="card hide toggle">
+                <img src="PNG/3H.png" class="card hide toggle">
+                <img src="PNG/4H.png" class="card hide toggle">
+                <img src="PNG/5H.png" class="card hide toggle">
+                <img src="PNG/6H.png" class="card hide toggle">
+                <img src="PNG/7H.png" class="card hide toggle">
+                <img src="PNG/8H.png" class="card hide toggle">
+                <img src="PNG/9H.png" class="card hide toggle">
+                <img src="PNG/10H.png" class="card hide toggle">
+            </div>
+
+            <div class="deck">
+                <img src="PNG/JC.png" class="card hide toggle">
+                <img src="PNG/QC.png" class="card hide toggle">
+                <img src="PNG/KC.png" class="card hide toggle">
+                <img src="PNG/JS.png" class="card hide toggle">
+                <img src="PNG/QS.png" class="card hide toggle">
+                <img src="PNG/KS.png" class="card hide toggle">
+                <img src="PNG/JD.png" class="card hide toggle">
+                <img src="PNG/QD.png" class="card hide toggle">
+                <img src="PNG/KD.png" class="card hide toggle">
+                <img src="PNG/JH.png" class="card hide toggle">
+                <img src="PNG/QH.png" class="card hide toggle">
+                <img src="PNG/KH.png" class="card hide toggle">
+                <img src="PNG/blue_back.png" class="card hide toggle">
+                <img src="PNG/red_back.png" class="card hide toggle">
+            </div>
         </div>
 
-        <div class = "deck">
-            <img src="PNG/AD.png" class= "card hide toggle">
-            <img src="PNG/2D.png" class= "card hide toggle">
-            <img src="PNG/3D.png" class= "card hide toggle">
-            <img src="PNG/4D.png" class= "card hide toggle">
-            <img src="PNG/5D.png" class= "card hide toggle">
-            <img src="PNG/6D.png" class= "card hide toggle">
-            <img src="PNG/7D.png" class= "card hide toggle">
-            <img src="PNG/8D.png" class= "card hide toggle">
-            <img src="PNG/9D.png" class= "card hide toggle">
-            <img src="PNG/10D.png" class= "card hide toggle">
-            <img src="PNG/AH.png" class= "card hide toggle">
-            <img src="PNG/2H.png" class= "card hide toggle">
-            <img src="PNG/3H.png" class= "card hide toggle">
-            <img src="PNG/4H.png" class= "card hide toggle">
-            <img src="PNG/5H.png" class= "card hide toggle">
-            <img src="PNG/6H.png" class= "card hide toggle">
-            <img src="PNG/7H.png" class= "card hide toggle">
-            <img src="PNG/8H.png" class= "card hide toggle">
-            <img src="PNG/9H.png" class= "card hide toggle">
-            <img src="PNG/10H.png" class= "card hide toggle">
-        </div>
-        
-        <div class = "deck">
-            <img src="PNG/JC.png" class= "card hide toggle">
-            <img src="PNG/QC.png" class= "card hide toggle">
-            <img src="PNG/KC.png" class= "card hide toggle">
-            <img src="PNG/JS.png" class= "card hide toggle">
-            <img src="PNG/QS.png" class= "card hide toggle">
-            <img src="PNG/KS.png" class= "card hide toggle">
-            <img src="PNG/JD.png" class= "card hide toggle">
-            <img src="PNG/QD.png" class= "card hide toggle">
-            <img src="PNG/KD.png" class= "card hide toggle">
-            <img src="PNG/JH.png" class= "card hide toggle">
-            <img src="PNG/QH.png" class= "card hide toggle">
-            <img src="PNG/KH.png" class= "card hide toggle">
-            <img src="PNG/blue_back.png" class= "card hide toggle">
-            <img src="PNG/red_back.png" class= "card hide toggle">
-        </div>
-    </div>    
+        <div class="reading">
+            <div class="scene" id="Tome">
+                <div class="card">
+                    <div class="back"></div>
+                    <div class="front"></div>
+                </div>
+            </div>
 
-    <!-- <div class="deck flex">
-        <img class="card" src="PNG/yellow_back.png">
-        <img class="card" src="PNG/purple_back.png">
-        <img class="card" src="PNG/green_back.png">
-        <img class="card" src="PNG/gray_back.png">
-        <img class="card" src="PNG/red_back.png">
-    </div> -->
+            <div class="scene" id="Ravenkind">
+                <div class="card">
+                    <div class="back"></div>
+                    <div class="front"></div>
+                </div>
+            </div>
+
+            <div class="scene" id="Sunsword">
+                <div class="card">
+                    <div class="back"></div>
+                    <div class="front"></div>
+                </div>
+            </div>
+
+            <div class="scene" id="Enemy">
+                <div class="card">
+                    <div class="back"></div>
+                    <div class="front"></div>
+                </div>
+            </div>
+
+            <div class="scene" id="Strahd">
+                <div class="card">
+                    <div class="back"></div>
+                    <div class="front"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 

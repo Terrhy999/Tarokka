@@ -1,7 +1,22 @@
+.flex {
+    display: flex;
+}
+
+.container {
+    display: flex;
+}
+
+.scene {
+    width: 100px;
+    height: 140px;
+    perspective: 600px;
+}
+
 .tarokka {
     display: flex;
     align-content: center;
     width: 320px;
+    padding: 15px;
 }
 
 .hide {
@@ -20,5 +35,69 @@
     height: 140px;
 }
 
+.scene .card {
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.front {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    background-color: blue;
+}
+
+.back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    background-color: red;
+    transform: rotateY(180deg);
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.reading {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 140px 140px 140px;
+    column-gap: 10px;
+    row-gap: 10px;
+    width: 320px;
+    padding: 15px;
+    grid-template-areas: 
+        ". two ."
+        "one five three"
+        ". four .";
+}
 
 
+#Tome {
+    position: static;
+    grid-area: one;
+}
+
+#Ravenkind {
+    position: static;
+    grid-area: two;
+}
+
+#Sunsword {
+    position: static;
+    grid-area: three;
+}
+
+#Enemy {
+    position: static;
+    grid-area: four;
+}
+
+#Strahd {
+    position: static;
+    grid-area: five;
+}
