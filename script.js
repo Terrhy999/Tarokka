@@ -1,6 +1,7 @@
 const CARD_PADDING = 25;
 const CARD_HEIGHT = 140;
 
+//Adds the "hide" class to all images with the class "toggle". The "hide" class sets the display to "none".
 function toggleHide() {
     let cards = document.querySelectorAll("img.toggle")
     for(let i = 0; i < cards.length; i++) {
@@ -14,6 +15,9 @@ function construct () {
     padCards(3);
 }
 
+//"deckNumber" paramater is the nth-child with the "deck" class of an element. "cards" is all of the card images inside of that "deck" element
+//loops over all of the images, setting the z-index of each card, and adding top padding of "CARD_PADDING" to each card
+//loops over all of the images, adding and eventListener for when you mouseover and mouseout of the card
 function padCards(deckNumber) {
     let deckDiv = document.querySelector(".deck:nth-child(" + deckNumber + ")");
     let cards = deckDiv.querySelectorAll("img.card");
@@ -25,6 +29,7 @@ function padCards(deckNumber) {
     }
 }
 
+//the eventListener function for mouseover, 
 function hoverEnter(deckNumber, index) {
     let deckDiv = document.querySelector(".deck:nth-child(" + deckNumber + ")");
     let currentIndex = index;
