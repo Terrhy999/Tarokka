@@ -9,168 +9,80 @@
     <script src="script.js" defer></script>
 </head>
 
-<body onload=zIndexLoop()>
-    <!-- <form class="flex">
-        <div class="dropDownMenu">
-            <button onclick="dropDownSuit()" class="dropDownButton" id="suitButton" type="button">
-                <img src="https://via.placeholder.com/30" class="cardImage">
-                <p class="cardName">Card Rank</p>
-            </button>
-            <div>
-                <ul class="dropDown hide" id="suitDropDown">
-                    <li class="dropDownItem" id="cardAce" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="cardImage">
-                        <p class="cardName">Ace</p>
-                    </li>
-
-                    <li class="dropDownItem" id="cardTwo" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="cardImage">
-                        <p class="cardName">Two</p>
-                    </li>
-
-                    <li class="dropDownItem" id="cardThree" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="cardImage">
-                        <p class="cardName">Three</p>
-                    </li>
-
-                    <li class="dropDownItem" id="cardFour" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="cardImage">
-                        <p class="cardName">Four</p>
-                    </li>
-
-                    <li class="dropDownItem" id="cardFive" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="cardImage">
-                        <p class="cardName">Five</p>
-                    </li>
-
-                    <li class="dropDownItem" id="cardSix" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="cardImage">
-                        <p class="cardName">Six</p>
-                    </li>
-
-                    <li class="dropDownItem" id="cardSeven" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="cardImage">
-                        <p class="cardName">Seven</p>
-                    </li>
-
-                    <li class="dropDownItem" id="cardEight" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="cardImage">
-                        <p class="cardName">Eight</p>
-                    </li>
-
-                    <li class="dropDownItem" id="cardNine" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="cardImage">
-                        <p class="cardName">Nine</p>
-                    </li>
-
-                    <li class="dropDownItem" id="cardTen" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="cardImage">
-                        <p class="cardName">Ten</p>
-                    </li>
-
-                    <li class="dropDownItem" id="cardJack" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="cardImage">
-                        <p class="cardName">Jack</p>
-                    </li>
-
-                    <li class="dropDownItem" id="cardQueen" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="cardImage">
-                        <p class="cardName">Queen</p>
-                    </li>
-
-                    <li class="dropDownItem" id="cardKing" onclick="setButton(this.id)">
-                        <img src="https://via.placeholder.com/30" class="cardImage">
-                        <p class="cardName">King</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="flex" id="radioButtons">
-
-            <label for="suitChoice1"><input type="radio" id="suitChoice1" name="suit" value="club"><img
-                    src="https://via.placeholder.com/30" class="cardImage">Club</label>
-
-
-            <label for="suitChoice2"><input type="radio" id="suitChoice2" name="suit" value="diamond"><img
-                    src="https://via.placeholder.com/30" class="cardImage">Diamond</label>
-
-
-            <label for="suitChoice3"><input type="radio" id="suitChoice3" name="suit" value="heard"><img
-                    src="https://via.placeholder.com/30" class="cardImage">Heart</label>
-
-
-            <label for="suitChoice4"><input type="radio" id="suitChoice4" name="suit" value="spade"><img
-                    src="https://via.placeholder.com/30" class="cardImage">Spade</label>
-
-            <button class="submitButton" id="submitButton" type="button">Add Card</button>
-        </div>
-    </form> -->
-    <button class="callDeck" type="button" onclick="toggleHide()">Click Me</button>
-    <div class = "flex tarokka">
-        <div class="deck rank">
-            <img src="PNG/AC.png" class= "deckCard card hide">
-            <img src="PNG/2C.png" class= "deckCard card hide">
-            <img src="PNG/3C.png" class= "deckCard card hide">
-            <img src="PNG/4C.png" class= "deckCard card hide">
-            <img src="PNG/5C.png" class= "deckCard card hide">
-            <img src="PNG/6C.png" class= "deckCard card hide">
-            <img src="PNG/7C.png" class= "deckCard card hide">
-            <img src="PNG/8C.png" class= "deckCard card hide">
-            <img src="PNG/9C.png" class= "deckCard card hide">
-            <img src="PNG/10C.png" class= "deckCard card hide">
-            <img src="PNG/AS.png" class= "deckCard card hide">
-            <img src="PNG/2S.png" class= "deckCard card hide">
-            <img src="PNG/3S.png" class= "deckCard card hide">
-            <img src="PNG/4S.png" class= "deckCard card hide">
-            <img src="PNG/5S.png" class= "deckCard card hide">
-            <img src="PNG/6S.png" class= "deckCard card hide">
-            <img src="PNG/7S.png" class= "deckCard card hide">
-            <img src="PNG/8S.png" class= "deckCard card hide">
-            <img src="PNG/9S.png" class= "deckCard card hide">
-            <img src="PNG/10S.png" class= "deckCard card hide">
+<body onload="construct()">
+    <button class="button" type="button" onclick="toggleHide()">Click Me</button>
+    <div class = "tarokka">
+        <div class="deck">
+            <img src="PNG/AC.png" class= "card hide toggle">
+            <img src="PNG/2C.png" class= "card hide toggle">
+            <img src="PNG/3C.png" class= "card hide toggle">
+            <img src="PNG/4C.png" class= "card hide toggle">
+            <img src="PNG/5C.png" class= "card hide toggle">
+            <img src="PNG/6C.png" class= "card hide toggle">
+            <img src="PNG/7C.png" class= "card hide toggle">
+            <img src="PNG/8C.png" class= "card hide toggle">
+            <img src="PNG/9C.png" class= "card hide toggle">
+            <img src="PNG/10C.png" class= "card hide toggle">
+            <img src="PNG/AS.png" class= "card hide toggle">
+            <img src="PNG/2S.png" class= "card hide toggle">
+            <img src="PNG/3S.png" class= "card hide toggle">
+            <img src="PNG/4S.png" class= "card hide toggle">
+            <img src="PNG/5S.png" class= "card hide toggle">
+            <img src="PNG/6S.png" class= "card hide toggle">
+            <img src="PNG/7S.png" class= "card hide toggle">
+            <img src="PNG/8S.png" class= "card hide toggle">
+            <img src="PNG/9S.png" class= "card hide toggle">
+            <img src="PNG/10S.png" class= "card hide toggle">
         </div>
 
-
-        <div class = "deck rank">
-            <img src="PNG/AD.png" class= "deckCardRed card hide">
-            <img src="PNG/2D.png" class= "deckCardRed card hide">
-            <img src="PNG/3D.png" class= "deckCardRed card hide">
-            <img src="PNG/4D.png" class= "deckCardRed card hide">
-            <img src="PNG/5D.png" class= "deckCardRed card hide">
-            <img src="PNG/6D.png" class= "deckCardRed card hide">
-            <img src="PNG/7D.png" class= "deckCardRed card hide">
-            <img src="PNG/8D.png" class= "deckCardRed card hide">
-            <img src="PNG/9D.png" class= "deckCardRed card hide">
-            <img src="PNG/10D.png" class= "deckCardRed card hide">
-            <img src="PNG/AH.png" class= "deckCardRed card hide">
-            <img src="PNG/2H.png" class= "deckCardRed card hide">
-            <img src="PNG/3H.png" class= "deckCardRed card hide">
-            <img src="PNG/4H.png" class= "deckCardRed card hide">
-            <img src="PNG/5H.png" class= "deckCardRed card hide">
-            <img src="PNG/6H.png" class= "deckCardRed card hide">
-            <img src="PNG/7H.png" class= "deckCardRed card hide">
-            <img src="PNG/8H.png" class= "deckCardRed card hide">
-            <img src="PNG/9H.png" class= "deckCardRed card hide">
-            <img src="PNG/10H.png" class= "deckCardRed card hide">
+        <div class = "deck">
+            <img src="PNG/AD.png" class= "card hide toggle">
+            <img src="PNG/2D.png" class= "card hide toggle">
+            <img src="PNG/3D.png" class= "card hide toggle">
+            <img src="PNG/4D.png" class= "card hide toggle">
+            <img src="PNG/5D.png" class= "card hide toggle">
+            <img src="PNG/6D.png" class= "card hide toggle">
+            <img src="PNG/7D.png" class= "card hide toggle">
+            <img src="PNG/8D.png" class= "card hide toggle">
+            <img src="PNG/9D.png" class= "card hide toggle">
+            <img src="PNG/10D.png" class= "card hide toggle">
+            <img src="PNG/AH.png" class= "card hide toggle">
+            <img src="PNG/2H.png" class= "card hide toggle">
+            <img src="PNG/3H.png" class= "card hide toggle">
+            <img src="PNG/4H.png" class= "card hide toggle">
+            <img src="PNG/5H.png" class= "card hide toggle">
+            <img src="PNG/6H.png" class= "card hide toggle">
+            <img src="PNG/7H.png" class= "card hide toggle">
+            <img src="PNG/8H.png" class= "card hide toggle">
+            <img src="PNG/9H.png" class= "card hide toggle">
+            <img src="PNG/10H.png" class= "card hide toggle">
         </div>
         
-        <div class = "deck face">
-            <img src="PNG/JC.png" class= "faceCard card hide">
-            <img src="PNG/QC.png" class= "faceCard card hide">
-            <img src="PNG/KC.png" class= "faceCard card hide">
-            <img src="PNG/JS.png" class= "faceCard card hide">
-            <img src="PNG/QS.png" class= "faceCard card hide">
-            <img src="PNG/KS.png" class= "faceCard card hide">
-            <img src="PNG/JD.png" class= "faceCard card hide">
-            <img src="PNG/QD.png" class= "faceCard card hide">
-            <img src="PNG/KD.png" class= "faceCard card hide">
-            <img src="PNG/JH.png" class= "faceCard card hide">
-            <img src="PNG/QH.png" class= "faceCard card hide">
-            <img src="PNG/KH.png" class= "faceCard card hide">
-            <img src="PNG/blue_back.png" class= "faceCard card hide">
-            <img src="PNG/red_back.png" class= "faceCard card hide">
+        <div class = "deck">
+            <img src="PNG/JC.png" class= "card hide toggle">
+            <img src="PNG/QC.png" class= "card hide toggle">
+            <img src="PNG/KC.png" class= "card hide toggle">
+            <img src="PNG/JS.png" class= "card hide toggle">
+            <img src="PNG/QS.png" class= "card hide toggle">
+            <img src="PNG/KS.png" class= "card hide toggle">
+            <img src="PNG/JD.png" class= "card hide toggle">
+            <img src="PNG/QD.png" class= "card hide toggle">
+            <img src="PNG/KD.png" class= "card hide toggle">
+            <img src="PNG/JH.png" class= "card hide toggle">
+            <img src="PNG/QH.png" class= "card hide toggle">
+            <img src="PNG/KH.png" class= "card hide toggle">
+            <img src="PNG/blue_back.png" class= "card hide toggle">
+            <img src="PNG/red_back.png" class= "card hide toggle">
         </div>
     </div>    
+
+    <!-- <div class="deck flex">
+        <img class="card" src="PNG/yellow_back.png">
+        <img class="card" src="PNG/purple_back.png">
+        <img class="card" src="PNG/green_back.png">
+        <img class="card" src="PNG/gray_back.png">
+        <img class="card" src="PNG/red_back.png">
+    </div> -->
 
 </body>
 
