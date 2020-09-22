@@ -16,6 +16,7 @@ function toggleFlip() {
     }
 }
 
+
 function construct () {
     padCards(1);
     padCards(2);
@@ -33,9 +34,11 @@ function padCards(deckNumber) {
         cards[i].style.zIndex = i;
         cards[i].style.top = i * CARD_PADDING + "px";
         cards[i].addEventListener("mouseenter", () => { hoverEnter(deckNumber, i); }, false);
-        cards[i].addEventListener("mouseout", () => { hoverExit(deckNumber, i); }, false);
+        cards[i].addEventListener("mouseout", () => hoverExit(deckNumber, i), false);
+        cards[i].addEventListener("click", function () {console.log(this.style.zIndex)}, false);
     }
 }
+
 
 //the eventListener function for mouseover, paramater "deckNumber" to select the nth-child with the "deck" class of an element, the paramater "index" to
 //determine which card is being hovered over. "cards" is a nodelist of all of the card images inside of the deck that come after the hovered card
@@ -53,7 +56,7 @@ function hoverEnter(deckNumber, index) {
 //the eventListener function for mouseout, paramater "deckNumber" to select the nth-child with the "deck" class of an element, the paramater "index" to
 //determine which card is being hovered over. "cards" is a nodelist of all of the card images inside of the deck that come after the hovered card
 //we loop over these card images, pushing each of them back up by the CARD_HEIGHT minus the CARD_PADDING
-function hoverExit(deckNumber, index) {
+let hoverExit = function (deckNumber, index) {
     let deckDiv = document.querySelector(".deck:nth-child(" + deckNumber + ")");
     let currentIndex = index;
     let cards = deckDiv.querySelectorAll("img.card");
@@ -62,3 +65,11 @@ function hoverExit(deckNumber, index) {
         cards[i].style.top = parseInt(cards[i].style.top, 10) - (CARD_HEIGHT - CARD_PADDING) + "px";
     }
 }
+
+// function selectCard(deckNumber, index) {
+//     let deckDiv = document.querySelector(".deck:nth-child(" + deckNumber + ")");
+//     let cardNumber = index;
+//     let card = deckDiv.querySelector(".card:nth-child(" + (cardNumber + 1) + ")");
+//     card.removeEventListener("mouseout");
+//     // card.removeEventListener("mouseenter")
+// }
