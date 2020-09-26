@@ -1,3 +1,7 @@
+body {
+    background-color: darkslategrey;
+}
+
 .flex {
     display: flex;
 }
@@ -7,8 +11,8 @@
 }
 
 .scene {
-    width: 100px;
-    height: 140px;
+    width: 200px;
+    height: 305px;
     perspective: 600px;
 }
 
@@ -17,10 +21,6 @@
     align-content: center;
     width: 320px;
     padding: 15px;
-}
-
-.hide {
-    display: none;
 }
 
 .deck {
@@ -35,10 +35,24 @@
     height: 140px;
 }
 
+.image {
+    width: 100px;
+    height: 153px;
+    z-index: -1;
+}
+
+.card.clicked {
+    outline: 2px blue dotted;
+    outline-offset: -2px;
+    background-color: blue;
+}
+
 .scene .card {
     position: relative;
     transition: transform 1s;
     transform-style: preserve-3d;
+    width: 200px;
+    height: 305px;
 }
 
 .front {
@@ -46,7 +60,8 @@
     width: 100%;
     position: absolute;
     backface-visibility: hidden;
-    background-color: blue;
+    background-image: url("PNG/red_back.png");
+    background-size: cover;
 }
 
 .back {
@@ -54,7 +69,10 @@
     width: 100%;
     position: absolute;
     backface-visibility: hidden;
-    background-color: red;
+    background-color: black;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     transform: rotateY(180deg);
 }
 
@@ -64,18 +82,28 @@
 
 .reading {
     display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-template-rows: 140px 140px 140px;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 305px 305px 305px;
     column-gap: 10px;
     row-gap: 10px;
     width: 320px;
     padding: 15px;
     grid-template-areas: 
-        ". two ."
+        "menu two ."
         "one five three"
         ". four .";
 }
 
+.selection {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 3px;
+    right: 1px;
+    text-align: center;
+    font-family: Tahoma;
+    font-weight: bold;
+}
 
 #Tome {
     position: static;
@@ -100,4 +128,8 @@
 #Strahd {
     position: static;
     grid-area: five;
+}
+
+.hide {
+    display: none;
 }
