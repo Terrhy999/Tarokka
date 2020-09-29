@@ -65,6 +65,8 @@ function toggleHide() {
     }
 }
 
+
+
 function toggleFlip() {
     let cards = document.querySelectorAll(".scene .card");
     for (let i = 0; i < cards.length; i++) {
@@ -139,16 +141,41 @@ function checkSelected(deckNumber, index) {
 }
 
 function setCard(index) {
-    let cardInfo = ((cardArray[index]).toString()).replaceAll(",", " ");
-    let tarrokCard = "url('Tarokka Deck/" + imageArray[cardInfo] + "')";
-    let readingCardArray = document.querySelector(".reading").querySelectorAll(".back");
-    let readingCard = readingCardArray[index];
-    readingCard.style.backgroundImage = tarrokCard;
-    let toggleArray = document.querySelector(".reading").querySelectorAll(".card");
-    toggleArray[index].classList.toggle("flipped");
+    flipReading(index);
+    setBack(index);
+    displayInfo(index);
 
 }
 
+function setBack(index) {
+    let card = (document.querySelector(".reading").querySelectorAll(".card"))[index];
+    if(card.classList.contains("flippled") == false) {
+        let cardImageIndex = ((cardArray[index]).toString()).replaceAll(",", " ");
+        let cardBackImage = "url('Tarokka Deck/" + imageArray[cardImageIndex] + "')";
+        let cardBackArray = document.querySelector(".reading").querySelectorAll(".back");
+        let cardBack = cardBackArray[index];
+        cardBack.style.backgroundImage = cardBackImage;
+    }
+}
+
+function flipReading(index) {
+    let readingCardArray = document.querySelector(".reading").querySelectorAll(".card");
+    let readingCard = readingCardArray[index];
+    readingCard.classList.toggle("flipped");
+}
+
+function displayInfo(index) {
+    let card = (document.querySelector(".reading").querySelectorAll(".card"))[index];
+    let cardDescriptionIndex = ((cardArray[index]).toString()).replaceAll(",", " ");
+    let cardDescription = cardDescriptions[cardDescriptionIndex];
+    let Description = document.querySelectorAll(".information")[index];
+    if(card.classList.contains("flipped") == false) {
+        Description.textContent = "";
+    }
+    else {
+        Description.textContent = cardDescription;
+    }
+}
 
 //the eventListener function for mouseover, paramater "deckNumber" to select the nth-child with the "deck" class of an element, the paramater "index" to
 //determine which card is being hovered over. "cards" is a nodelist of all of the card images inside of the deck that come after the hovered card
@@ -175,11 +202,3 @@ let hoverExit = function (deckNumber, index) {
         cards[i].style.top = parseInt(cards[i].style.top, 10) - (CARD_HEIGHT - CARD_PADDING) + "px";
     }
 }
-
-// function selectCard(deckNumber, index) {
-//     let deckDiv = document.querySelector(".deck:nth-child(" + deckNumber + ")");
-//     let cardNumber = index;
-//     let card = deckDiv.querySelector(".card:nth-child(" + (cardNumber + 1) + ")");
-//     card.removeEventListener("mouseout");
-//     // card.removeEventListener("mouseenter")
-// }

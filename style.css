@@ -86,7 +86,7 @@ body {
     grid-template-rows: 305px 305px 305px;
     column-gap: 10px;
     row-gap: 10px;
-    width: 320px;
+    width: 620px;
     padding: 15px;
     grid-template-areas: 
         "menu two ."
@@ -103,6 +103,17 @@ body {
     text-align: center;
     font-family: Tahoma;
     font-weight: bold;
+}
+
+.information {
+    font-family: 'MedievalSharp', cursive;
+}
+
+.infoContainer {
+    background-color: khaki;
+    padding: 15px;
+    width: 700px;
+    height: 700px;
 }
 
 #Tome {
