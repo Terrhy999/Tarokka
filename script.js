@@ -251,52 +251,20 @@ function hoverExit(columnNumber, cardNumber) {
     display.style.backgroundImage = "";
 }
 
-let selectedCardArray = [null, null, null, null, null];
-
 function CardClick(cardNumber) {
     let cards = document.querySelectorAll(".column .card");
     let card = cards[cardNumber];
     let cardSelection = card.querySelector(".selection");
 
-    let cardSelected = checkCardSelected(cardNumber, card, cardSelection);
+    let cardSelected = selectedCards.checkCardSelected(cardNumber, card, cardSelection);
 
     if(cardSelected[0] == true) {
         return;
     }
 
     else {
-        selectCard(cardNumber, card, cardSelection);
+        selectedCards.selectCard(cardNumber, card, cardSelection);
     }
-}
-
-function selectCard(cardNumber, card, cardSelection) {
-    for( let i = 0; i < selectedCardArray.length; i++) {
-        if(selectedCardArray[i] === null) {
-            selectedCardArray[i] = cardArray[cardNumber].Index;
-            cardSelection.textContent = i + 1;
-            card.classList.toggle("clicked");
-            break;
-        }
-        if(i == 4) {
-            alert("Five cards have already been selected");
-        }
-    }
-}
-
-function checkCardSelected(cardNumber, card, cardSelection) {
-    let value = [false, 0];
-    for(let i = 0; i < selectedCardArray.length; i++) {
-        if(selectedCardArray[i] === cardArray[cardNumber].Index) {
-            value[0] = true;
-            value[1] = i;
-        }
-    }
-    if(value[0] === true) {
-        card.classList.toggle("clicked");
-        selectedCardArray[value[1]] = null;
-        cardSelection.textContent = "";
-    }
-    return value;
 }
 
 function addFlipEvents() {
@@ -309,11 +277,49 @@ function addFlipEvents() {
 function flipCard(index) {
     let card = document.querySelector(".reading").querySelectorAll(".flipCard")[index];
     card.classList.toggle("flipped");
-    setFlipImage(index);
+    selectedCards.setFlipImage(index);
 }
 
-function setFlipImage(index) {
-    let card = document.querySelector(".reading").querySelectorAll(".flipCard")[index].querySelector(".back");
-    let imageURL = cardArray[selectedCardArray[index]].Tarokka_Card_URL;
-    card.style.backgroundImage = "url('Deck/" + imageURL;
-}
+let selectedCards = (function() {
+
+    let selectedCardArray = [null, null, null, null, null];
+
+    return {
+
+        setFlipImage: function(index) {
+            let card = document.querySelector(".reading").querySelectorAll(".flipCard")[index].querySelector(".back");
+            let imageURL = cardArray[selectedCardArray[index]].Tarokka_Card_URL;
+            card.style.backgroundImage = "url('Deck/" + imageURL;
+        },
+        
+        checkCardSelected: function(cardNumber, card, cardSelection) {
+            let value = [false, 0];
+            for(let i = 0; i < selectedCardArray.length; i++) {
+                if(selectedCardArray[i] === cardArray[cardNumber].Index) {
+                    value[0] = true;
+                    value[1] = i;
+                }
+            }
+            if(value[0] === true) {
+                card.classList.toggle("clicked");
+                selectedCardArray[value[1]] = null;
+                cardSelection.textContent = "";
+            }
+            return value;
+        },
+
+        selectCard: function(cardNumber, card, cardSelection) {
+            for( let i = 0; i < selectedCardArray.length; i++) {
+                if(selectedCardArray[i] === null) {
+                    selectedCardArray[i] = cardArray[cardNumber].Index;
+                    cardSelection.textContent = i + 1;
+                    card.classList.toggle("clicked");
+                    break;
+                }
+                if(i == 4) {
+                    alert("Five cards have already been selected");
+                }
+            }
+        }
+    }
+}());
