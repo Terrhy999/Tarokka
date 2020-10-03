@@ -207,7 +207,7 @@ function addCardHoverEvents(columnNumber) {
 function addCardClickEvent() {
     let cards = document.querySelectorAll(".deck .card");
     for(let i = 0; i < cards.length; i++) {
-        cards[i].addEventListener("click", () => CardClick(i), false);
+        cards[i].addEventListener("click", () => cardClick(i), false);
     }
 }
 
@@ -251,7 +251,7 @@ function hoverExit(columnNumber, cardNumber) {
     display.style.backgroundImage = "";
 }
 
-function CardClick(cardNumber) {
+function cardClick(cardNumber) {
     let cards = document.querySelectorAll(".column .card");
     let card = cards[cardNumber];
     let cardSelection = card.querySelector(".selection");
