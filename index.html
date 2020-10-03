@@ -8,123 +8,77 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet"> 
-    <script src="script.js" defer></script>
     <script src="tarrokaCards.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body onload="construct()">
-    <button class="button" type="button" onclick="toggleHide()">Click Me</button>
+    <button class="button" type="button" onclick="setPlayingCard()">Playing Cards</button>
+    <button class="button" type="button" onclick="setTarokkaCard()">Tarokka Cards</button>
     <div class="flex">
-        <div class="tarokka">
-            <div class="deck">
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/AC.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/2C.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/3C.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/4C.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/5C.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/6C.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/7C.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/8C.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/9C.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/10C.png"class="image" ></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/AS.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/2S.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/3S.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/4S.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/5S.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/6S.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/7S.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/8S.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/9S.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/10S.png"class="image" ></div>
+        <div class="deck">
+            <div class="column">
+
             </div>
 
-            <div class="deck">
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/AD.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/2D.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/3D.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/4D.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/5D.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/6D.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/7D.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/8D.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/9D.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/10D.png"class="image" ></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/AH.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/2H.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/3H.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/4H.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/5H.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/6H.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/7H.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/8H.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/9H.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/10H.png"class="image" ></div>
+            <div class="column">
+
             </div>
 
-            <div class="deck">
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/JC.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/QC.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/KC.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/JS.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/QS.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/KS.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/JD.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/QD.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/KD.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/JH.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/QH.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/KH.png" class="image"></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/blue_back.png" class="image" ></div>
-                <div class="card hide toggle"><div class="selection"></div><img src="PNG/red_back.png" class="image" ></div>
+            <div class="column">
+
             </div>
         </div>
 
-        <div class="reading">
+    <div class="reading">
             <div class="scene" id="Tome">
-                <div class="card">
+                <div class="flipCard">
                     <div class="back"></div>
                     <div class="front"></div>
                 </div>
             </div>
 
             <div class="scene" id="Ravenkind">
-                <div class="card">
+                <div class="flipCard">
                     <div class="back"></div>
                     <div class="front"></div>
                 </div>
             </div>
 
             <div class="scene" id="Sunsword">
-                <div class="card">
+                <div class="flipCard">
                     <div class="back"></div>
                     <div class="front"></div>
                 </div>
             </div>
 
             <div class="scene" id="Enemy">
-                <div class="card">
+                <div class="flipCard">
                     <div class="back"></div>
                     <div class="front"></div>
                 </div>
             </div>
 
             <div class="scene" id="Strahd">
-                <div class="card">
+                <div class="flipCard">
                     <div class="back"></div>
                     <div class="front"></div>
                 </div>
             </div>
+
+            <div class="scene" id="Menu">
+                <div class="display"></div>
+            </div>
         </div>
 
-        <div class = "infoContainer">
+<!--        <div class = "infoContainer">
             <p class = "information"></p>
             <p class = "information"></p>
             <p class = "information"></p>
             <p class = "information"></p>
             <p class = "information"></p>
         </div>
-    </div>
+    </div> -->
 
 </body>
 

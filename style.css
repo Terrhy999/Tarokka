@@ -4,26 +4,23 @@ body {
 
 .flex {
     display: flex;
+    width: 650px;
 }
 
-.container {
-    display: flex;
-}
-
-.scene {
+/* .scene {
     width: 200px;
     height: 305px;
     perspective: 600px;
-}
+} */
 
-.tarokka {
+.deck {
     display: flex;
     align-content: center;
-    width: 320px;
+    width: 330px;
     padding: 15px;
 }
 
-.deck {
+.column {
     width: 110px;
     height: 615px;
     position: relative;
@@ -32,14 +29,28 @@ body {
 .card {
     position: absolute;
     width: 100px;
+    height: 153px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card.tarokka {
     height: 140px;
 }
 
-.image {
+.display {
+    width: 200px;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+/* .image {
     width: 100px;
     height: 153px;
     z-index: -1;
-}
+} */
 
 .card.clicked {
     outline: 2px blue dotted;
@@ -47,7 +58,13 @@ body {
     background-color: blue;
 }
 
-.scene .card {
+.card.clicked.tarokka {
+    outline: 2px red dotted;
+    outline-offset: -2px;
+    background-color: red;
+}
+
+.scene .flipCard {
     position: relative;
     transition: transform 1s;
     transform-style: preserve-3d;
@@ -76,7 +93,7 @@ body {
     transform: rotateY(180deg);
 }
 
-.card.flipped {
+.flipCard.flipped {
     transform: rotateY(180deg);
 }
 
@@ -98,6 +115,7 @@ body {
     width: 20px;
     height: 20px;
     position: absolute;
+    margin: 0px;
     top: 3px;
     right: 1px;
     text-align: center;
@@ -105,16 +123,23 @@ body {
     font-weight: bold;
 }
 
-.information {
-    font-family: 'MedievalSharp', cursive;
+.selection.tarokka {
+    color: white;
+    right: 4px;
+    background-color: black;
+    border-radius: 10px;
 }
 
-.infoContainer {
+/* .information {
+    font-family: 'MedievalSharp', cursive;
+} */
+
+/* .infoContainer {
     background-color: khaki;
     padding: 15px;
     width: 700px;
     height: 700px;
-}
+} */
 
 #Tome {
     position: static;
@@ -139,6 +164,11 @@ body {
 #Strahd {
     position: static;
     grid-area: five;
+}
+
+#Menu {
+    position: static;
+    grid-area: menu;
 }
 
 .hide {
