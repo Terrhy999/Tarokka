@@ -4,7 +4,10 @@ body {
 
 .flex {
     display: flex;
-    width: 650px;
+}
+
+.flex.vertical {
+    flex-direction: column;
 }
 
 /* .scene {
@@ -130,16 +133,17 @@ body {
     border-radius: 10px;
 }
 
-/* .information {
+.fortune {
     font-family: 'MedievalSharp', cursive;
-} */
+}
 
-/* .infoContainer {
+
+.container {
     background-color: khaki;
     padding: 15px;
     width: 700px;
-    height: 700px;
-} */
+    height: 400px;
+}
 
 #Tome {
     position: static;

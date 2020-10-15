@@ -15,7 +15,8 @@
 <body onload="construct()">
     <button class="button" type="button" onclick="setPlayingCard()">Playing Cards</button>
     <button class="button" type="button" onclick="setTarokkaCard()">Tarokka Cards</button>
-    <div class="flex">
+    <button class="button" type="button" onclick="hideCards()">Hide Cards</button>
+    <div class = "flex">
         <div class="deck">
             <div class="column">
 
@@ -30,7 +31,7 @@
             </div>
         </div>
 
-    <div class="reading">
+        <div class="reading">
             <div class="scene" id="Tome">
                 <div class="flipCard">
                     <div class="back"></div>
@@ -70,6 +71,31 @@
                 <div class="display"></div>
             </div>
         </div>
+
+    
+
+        <div class="flex vertical">
+
+            <div class = "container">
+                <p class="fortune"></p>
+                <p class="fortune"></p>
+                <p class="fortune"></p>
+                <p class="fortune"></p>
+                <p class="fortune"></p>
+            </div>
+
+            <button class="button" type="button" onclick="toggleDescription()">DM Info</button>
+
+            <div class="container">
+                <p class="description hide"></p>
+                <p class="description hide"></p>
+                <p class="description hide"></p>
+                <p class="description hide"></p>
+                <p class="description hide"></p>
+            </div>
+
+        </div>
+    </div>
 
 <!--        <div class = "infoContainer">
             <p class = "information"></p>
