@@ -1,20 +1,22 @@
 body {
     background-color: darkslategrey;
+    height: 1000px;
 }
 
 .flex {
     display: flex;
+    height: 1000px;
 }
 
 .flex.vertical {
     flex-direction: column;
+    padding: 15px;
 }
 
-/* .scene {
-    width: 200px;
-    height: 305px;
-    perspective: 600px;
-} */
+.scene {
+    width: 100%;
+    height: 100%;
+}
 
 .deck {
     display: flex;
@@ -71,8 +73,8 @@ body {
     position: relative;
     transition: transform 1s;
     transform-style: preserve-3d;
-    width: 200px;
-    height: 305px;
+    width: 100%;
+    height: 100%;
 }
 
 .front {
@@ -102,11 +104,16 @@ body {
 
 .reading {
     display: grid;
-    grid-template-columns: 200px 200px 200px;
-    grid-template-rows: 305px 305px 305px;
+    grid-template-columns: repeat( 3, minmax(100px, 1fr));
+    grid-template-rows: repeat( 3, minmax(150px, 1fr));
     column-gap: 10px;
     row-gap: 10px;
-    width: 620px;
+    width: 62vw;
+    height: 94vw;
+    max-height: 900px;
+    max-width: 600px;
+    min-height: 200px;
+    min-width: 133px;
     padding: 15px;
     grid-template-areas: 
         "menu two ."
@@ -141,7 +148,7 @@ body {
 .container {
     background-color: khaki;
     padding: 15px;
-    width: 700px;
+    width: 500px;
     height: 400px;
 }
 
